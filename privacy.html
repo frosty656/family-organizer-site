@@ -14,13 +14,18 @@
   <p><em>Last updated: October 5, 2026</em></p>
 
   <h2>What the app accesses</h2>
-  <p>Family Organizer requests read-only access to Google Calendar
-  (<code>https://www.googleapis.com/auth/calendar.readonly</code>) for the account that authorizes it.
-  It reads the list of calendars and their events so they can be displayed on a tablet in our home.</p>
+  <p>Family Organizer requests the following Google Calendar access for the account that authorizes it:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/calendar.readonly</code> &mdash; to read the list of calendars,
+    their colors, and their events so they can be displayed on a tablet in our home.</li>
+    <li><code>https://www.googleapis.com/auth/calendar.events</code> &mdash; to change the date and time of an
+    existing event when a member of the household edits it on the dashboard. The app does not create or
+    delete events, and makes no changes on its own.</li>
+  </ul>
 
   <h2>How data is used and stored</h2>
   <ul>
-    <li>Calendar data is used only to display events on the household dashboard.</li>
+    <li>Calendar data is used only to display events on the household dashboard and to apply edits made there.</li>
     <li>The app runs on a private server on our home network. OAuth tokens are stored on that server only.</li>
     <li>Event data is cached briefly in memory and is not written to a database.</li>
     <li>No data is sold, shared with third parties, used for advertising, or used to train AI models.</li>
